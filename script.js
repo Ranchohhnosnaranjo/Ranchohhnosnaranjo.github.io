@@ -5,6 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const cerrarLightbox = document.getElementById('cerrar-lightbox');
     const enlaces = document.querySelectorAll('nav ul li a');
     const secciones = document.querySelectorAll('.seccion');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    }
+
+
+
 
     // Abre el lightbox al hacer clic en una imagen
     imagenes.forEach(imagen => {
@@ -53,5 +64,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 seccionMostrar.classList.remove('oculto');
             }
         });
-    }); 
+    });
 });
