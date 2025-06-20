@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #0078d7;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+.seccion {
+    padding: 2rem;
+    margin: 2rem 0;
+    border-top: 1px solid #ddd;
+}
+#inicio {
+    background-color: #f4f4f4;
+}
+
+.oculto {
+    display: none;
+}
+#inicio p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#inicio ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+#acerca {
+    background-color: #eef7ff;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+#contacto {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#contacto a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+#contacto a i {
+    margin-right: 8px; 
+    color: #4267B2;
+}
+
+#contacto a:hover i {
+    color: #365899; 
+}
+
+
+#contacto a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+#contacto a i {
+    margin-right: 8px; 
+}
+
+#contacto a .fa-facebook {
+    color: #4267B2; 
+}
+
+#contacto a .fa-facebook:hover {
+    color: #365899; 
+}
+
+#contacto a .fa-instagram {
+    color: #C13584; 
+}
+
+#contacto a .fa-instagram:hover {
+    color: #E1306C;
+}
+
+#contacto a .fa-whatsapp {
+    color: #25D366; 
+}
+
+#contacto a .fa-whatsapp:hover {
+    color: #128C7E; 
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:focus {
+    outline: 3px solid yellow;
+}
+
+/* Modo de Alto Contraste */
+body.alto-contraste {
+    background-color: black;
+    color: white;
+}
+
+body.alto-contraste button {
+    background-color: yellow;
+    color: black;
+}
+/* Fondo de la portada */
+.portada {
+    background-image: url('rancho.jpg'); 
+    background-size: cover; 
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita repeticiones */
+    color: white; /* Texto en color blanco para contraste */
+    text-align: center; /* Centra el texto */
+    padding: 5rem 1rem; /* Espaciado interno */
+    height: auto; /* Altura del encabezado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.portada img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+header.portada {
+    width: 100%;
+    max-width: 1310px;
+    height: 350px; 
+    overflow: hidden; 
+    position: relative;
+}
+
+header.portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Estilos del título y la navegación */
+.portada h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.portada nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.portada nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.portada nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.portada nav ul li a:focus, .portada nav ul li a:hover {
+    text-decoration: underline;
+    outline: 2px solid yellow;
+}
+/* Estilos para la galería */
+.galeria {
+    padding: 2rem;
+    text-align: center;
+}
+
+.galeria h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+/* Diseño en 2 columnas */
+.grid-imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 10px; /* Espaciado entre las imágenes */
+}
+
+.grid-imagenes img {
+    width: 100%; /* Ocupa el ancho del contenedor */
+    height: auto;
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.grid-imagenes img:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+.video-galeria {
+    width: 100%;
+    height: auto; /* Ajusta el tamaño al igual que las imágenes */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    cursor: pointer; /* Opcional, para que parezca interactivo */
+}
+
+
+
+
+
+/* Lightbox (visor emergente) */
+.lightbox {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+.cerrar-lightbox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+}
+html {
+    scroll-behavior: smooth;
+}
