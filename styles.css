@@ -492,10 +492,11 @@
   @media (max-width: 768px) {
       header.portada h1 {
           font-size: 2.2rem;
+          
       }
 
       nav ul {
-          position: fixed;
+        position: fixed;
         top: 70px; /* Debajo de la barra móvil */
         right: 0;
         width: 70%;
@@ -503,7 +504,7 @@
         background-color: var(--color-primario);
         padding: 2rem;
         z-index: 1000;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         transform: translateX(100%);
         transition: transform 0.3s ease;
       }
