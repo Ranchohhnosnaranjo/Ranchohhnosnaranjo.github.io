@@ -19,13 +19,16 @@
 
 <body>
     <header class="portada">
-        <h1>Bienvenidos al Rancho Hnos. Naranjo</h1>
+        <h1>Rancho Hnos. Naranjo</h1>
+        <p>Un paraíso natural para disfrutar en familia</p>
+        <a href="#inicio" class="btn-descubrir">Descubrir más</a>
+        
         <nav>
             <button class="menu-toggle" aria-label="Menú"><i class="fas fa-bars"></i></button>
             <ul>
-                <li><a href="#" data-seccion="inicio">Inicio</a></li>
-                <li><a href="#" data-seccion="acerca">Acerca</a></li>
-                <li><a href="#" data-seccion="contacto">Contacto</a></li>
+                <li><a href="#inicio" data-seccion="inicio">Inicio</a></li>
+                <li><a href="#acerca" data-seccion="acerca">Acerca</a></li>
+                <li><a href="#contacto" data-seccion="contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -33,52 +36,64 @@
     <main>
         <!-- Sección de Inicio -->
         <section id="inicio" class="seccion">
-            <h2>Contamos con:</h2>
+            <h2>Bienvenidos al Rancho Hnos. Naranjo</h2>
             <p>
-                Bienvenidos al <strong>Rancho Hnos. Naranjo</strong>, un destino perfecto para disfrutar de la
-                naturaleza, la relajación y el entretenimiento en un ambiente familiar y acogedor. Nuestro rancho está
-                diseñado para ofrecer una experiencia inolvidable, combinando comodidades modernas con el encanto del
-                entorno natural.
+                Un destino perfecto para disfrutar de la naturaleza, la relajación y el entretenimiento en un ambiente familiar y acogedor. Nuestro rancho está diseñado para ofrecer una experiencia inolvidable, combinando comodidades modernas con el encanto del entorno natural.
             </p>
-            <p>
-                Contamos con una variedad de servicios pensados para satisfacer las necesidades de todos nuestros
-                visitantes:
+            
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Alimentación</h3>
+                    <p>Disfruta de deliciosos platos típicos, aperitivos y bebidas refrescantes.</p>
+                </div>
+                
+                <div class="servicio">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Cancha deportiva</h3>
+                    <p>Perfecta para practicar tus deportes favoritos y mantenerte activo.</p>
+                </div>
+                
+                <div class="servicio">
+                    <i class="fas fa-swimming-pool"></i>
+                    <h3>Piscina</h3>
+                    <p>Piscinas exclusivas para adultos, jóvenes y niños, con seguridad garantizada.</p>
+                </div>
+                
+                <div class="servicio">
+                    <i class="fas fa-bed"></i>
+                    <h3>Hospedaje</h3>
+                    <p>Habitaciones cómodas y equipadas para una estancia tranquila y confortable.</p>
+                </div>
+                
+                <div class="servicio">
+                    <i class="fas fa-hot-tub"></i>
+                    <h3>Jacuzzi</h3>
+                    <p>Relájate y desconecta en nuestro jacuzzi con vistas a la naturaleza.</p>
+                </div>
+            </div>
+            
+            <p class="text-center" style="margin-top: 3rem;">
+                Ya sea para unas vacaciones en familia, una escapada con amigos o simplemente un día de descanso, el <strong>Rancho Hnos. Naranjo</strong> es el lugar perfecto para recargar energías y crear recuerdos inolvidables. ¡Te esperamos con los brazos abiertos!
             </p>
-            <ul>
-                <li><strong>Alimentación:</strong> Disfruta de deliciosos platos típicos, varios aperitivos y bebidas
-                    refrescantes.</li>
-                <li><strong>Cancha deportiva:</strong> Perfecta para practicar tus deportes favoritos y mantenerte
-                    activo durante tu estadía.</li>
-                <li><strong>Piscina:</strong> Tenemos piscinas exclusivas para adultos, jóvenes y niños, asegurando
-                    diversión y seguridad para toda la familia.</li>
-                <li><strong>Hospedaje:</strong> Nuestras cómodas habitaciones están equipadas para garantizar una
-                    estancia tranquila y confortable.</li>
-                <li><strong>Jacuzzi:</strong> Relájate en nuestro jacuzzi, ideal para desconectarte y disfrutar de un
-                    momento de paz.</li>
-            </ul>
-            <p>
-                Ya sea para unas vacaciones en familia, una escapada con amigos o simplemente un día de descanso, el
-                <strong>Rancho Hnos. Naranjo</strong> es el lugar perfecto para recargar energías y crear recuerdos
-                inolvidables. ¡Te esperamos con los brazos abiertos!
-            </p>
+            
             <div id="galeria" class="galeria">
+                <h2>Nuestras Instalaciones</h2>
                 <div class="grid-imagenes">
-                    <img src="img/ran.jpg" alt="Pileta" class="imagen-galeria">
-                    <img src="img/r9.jpeg" alt="Descripción de la imagen 2" class="imagen-galeria">
-                    <img src="img/r2.jpg" alt="Vista piscina" class="imagen-galeria">
-                    <img src="img/cascada.jpeg" alt="Cascada" class="imagen-galeria">
-                    <img src="img/jacuzzi.jpeg" alt="Jacuzzi" class="imagen-galeria">
+                    <img src="img/ran.jpg" alt="Pileta principal" class="imagen-galeria">
+                    <img src="img/jacuzzi.jpeg" alt="Cancha deportiva" class="imagen-galeria">
+                    <img src="img/r1.jpg" alt="Vista piscina" class="imagen-galeria">
+                    <img src="img/r9.jpeg" alt="Cascada natural" class="imagen-galeria">
+                    <img src="img/ran.jpg" alt="Jacuzzi" class="imagen-galeria">
                     <img src="img/ran3.jpg" alt="Primer plano de la piscina" class="imagen-galeria">
-                    <img src="img/r8.jpg" alt="Descripción de la imagen 7" class="imagen-galeria">
-                    <img src="img/r7.jpg" alt="Descripción de la imagen 8" class="imagen-galeria">
-                    <img src="img/r1.jpg" alt="Pileta" class="imagen-galeria">
+                    <img src="img/r7.jpg" alt="Cabañas" class="imagen-galeria">
+                    <img src="img/r2.jpg" alt="Área de descanso" class="imagen-galeria">
+                    <img src="img/cascada.jpeg" alt="Paisaje del rancho" class="imagen-galeria">
 
-                    <!-- Video añadido -->
                     <video class="video-galeria" controls>
-                        <source src="img/video1.mp4" type="video/mp4">
+                        <source src="https://player.vimeo.com/external/454748257.sd.mp4?s=3c2d5b4f4e7e2a1f9d6c5a8e1c7d4e5f&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
                         Tu navegador no soporta videos HTML5. Por favor, actualiza tu navegador.
                     </video>
-
                 </div>
             </div>
         </section>
@@ -86,26 +101,65 @@
         <!-- Sección Acerca -->
         <section id="acerca" class="seccion oculto">
             <h2>Acerca del Rancho Hnos. Naranjo</h2>
-            <p>El Rancho Hnos. Naranjo es un complejo dedicado al disfrute de la naturaleza y el esparcimiento familiar.
-            </p>
+            <p>Fundado en 1995, el Rancho Hnos. Naranjo es un complejo dedicado al disfrute de la naturaleza y el esparcimiento familiar. Ubicado en un entorno privilegiado, ofrecemos una experiencia única donde podrás desconectar de la rutina y conectar con la naturaleza.</p>
+            
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <i class="fas fa-history"></i>
+                    <h3>Nuestra Historia</h3>
+                    <p>Desde hace más de 25 años, hemos crecido manteniendo nuestros valores de calidad, servicio y respeto por la naturaleza.</p>
+                </div>
+                
+                <div class="servicio">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Entorno Natural</h3>
+                    <p>Contamos con 15 hectáreas de terreno natural, donde podrás disfrutar de paisajes únicos y aire puro.</p>
+                </div>
+                
+                <div class="servicio">
+                    <i class="fas fa-users"></i>
+                    <h3>Equipo</h3>
+                    <p>Nuestro equipo está formado por profesionales apasionados que harán que tu experiencia sea inolvidable.</p>
+                </div>
+            </div>
+            
+            <div class="galeria">
+                <div class="grid-imagenes">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Entorno natural" class="imagen-galeria">
+                    <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" alt="Equipo del rancho" class="imagen-galeria">
+                    <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Vista panorámica" class="imagen-galeria">
+                </div>
+            </div>
         </section>
 
         <!-- Sección de Contacto -->
         <section id="contacto" class="seccion oculto">
             <h2>Contacto</h2>
-            <p>Escribenos en cualquiera de nuestras redes sociales o WhatsApp</p>
-            <p>
-                Síguenos en:
-                <a href="https://www.facebook.com/rancho.hnosnaranjo/" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook fa-lg"></i>
+            <p>¿Tienes alguna pregunta o deseas hacer una reserva? Estamos aquí para ayudarte. Contáctanos a través de cualquiera de nuestros canales:</p>
+            
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/rancho.hnosnaranjo/" target="_blank" class="red-social" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
                 </a>
-                <a href="https://www.instagram.com/rancho.naranjo/" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram fa-lg"></i>
+                
+                <a href="https://www.instagram.com/rancho.naranjo/" target="_blank" class="red-social" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
                 </a>
-                <a href="https://wa.me/593996295701" target="_blank" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp fa-lg"></i>
+                
+                <a href="https://wa.me/593996295701" target="_blank" class="red-social" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
                 </a>
-            </p>
+            </div>
+            
+            <div style="margin-top: 3rem; padding: 2rem; background-color: rgba(44, 94, 26, 0.1); border-radius: 15px;">
+                <h3>Visítanos</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Carretera a la Costa, Km 15.5, Guayaquil, Ecuador</p>
+                <p><i class="fas fa-phone"></i> +593 99 629 5701</p>
+                <p><i class="fas fa-envelope"></i> info@ranchohnosnaranjo.com</p>
+            </div>
         </section>
 
         <!-- Lightbox -->
