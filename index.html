@@ -18,19 +18,30 @@
 </head>
 
 <body>
-    <header class="portada">
+    <!-- Barra de navegación móvil fija -->
+     <div class="navbar" id="navbar">
+        <div class="navbar-content">
+            <a href="#inicio" class="navbar-logo">Rancho Hnos. Naranjo</a>
+            <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <header class="portada" id="inicio">
         <h1>Rancho Hnos. Naranjo</h1>
         <p>Un paraíso natural para disfrutar en familia</p>
-        <a href="#inicio" class="btn-descubrir">Descubrir más</a>
+        <a href="#servicios" class="btn-descubrir">Descubrir más</a>
         
+       <div class="nav-container">
         <nav>
-            <button class="menu-toggle" aria-label="Menú"><i class="fas fa-bars"></i></button>
             <ul>
                 <li><a href="#inicio" data-seccion="inicio">Inicio</a></li>
-                <li><a href="#acerca" data-seccion="acerca">Acerca</a></li>
+                <li><a href="#acerca" data-seccion="acerca">Información</a></li>
                 <li><a href="#contacto" data-seccion="contacto">Contacto</a></li>
             </ul>
         </nav>
+    </div>
     </header>
 
     <main>
