@@ -32,7 +32,7 @@
            ENCABEZADO Y NAVEGACIÓN
         ============================= */
   header.portada {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), url('img/rancho.jpg'));
+      background: linear-gradient(rgba(0, 0, 0, 0.6), url('../img/portada.jpg') no-repeat center center/cover);
       background-size: cover;
       background-position: center;
       color: var(--color-blanco);
