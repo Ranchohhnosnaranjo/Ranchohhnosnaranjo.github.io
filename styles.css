@@ -32,7 +32,7 @@
            ENCABEZADO Y NAVEGACIÓN
         ============================= */
   header.portada {
-      background: url('../img/rancho.jpg') no-repeat center center/cover;
+      background: url('../img/portada.png') no-repeat center center/cover;
       background-size: cover;
       background-position: center;
       color: var(--color-blanco);
@@ -59,7 +59,7 @@
   nav {
       width: 100%;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 2rem auto;
       padding: 1rem;
   }
 
