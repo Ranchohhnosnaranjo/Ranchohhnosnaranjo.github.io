@@ -499,9 +499,9 @@
       width: 100%;
   }
 
-      nav ul {
+       nav ul {
         position: fixed;
-        top: 70px; /* Debajo de la barra móvil */
+        top: 70px;
         right: 0;
         width: 70%;
         height: calc(100vh - 70px);
@@ -511,11 +511,14 @@
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         transform: translateX(100%);
         transition: transform 0.3s ease;
-      }
+        flex-direction: column; /* Añadido */
+        gap: 15px; /* Añadido */
+    }
 
-      nav.active ul {
-          transform: translateX(0);
-      }
+    nav.active ul {
+        transform: translateX(0);
+    }
+
 
 
       .menu-toggle {
@@ -529,10 +532,6 @@
 
       .seccion h2 {
           font-size: 2rem;
-      }
-
-      .nav-container {
-          display: none;
       }
 
       .navbar-mobile {

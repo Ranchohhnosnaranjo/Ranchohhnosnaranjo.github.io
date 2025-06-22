@@ -6,7 +6,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const enlaces = document.querySelectorAll('nav ul li a');
     const secciones = document.querySelectorAll('.seccion');
     const nav = document.querySelector('nav');
+    const btnDescubrir = document.querySelector('.btn-descubrir');
+    const seccionAcerca = document.getElementById('acerca');
     
+
+
+    if (btnDescubrir) {
+    btnDescubrir.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Ocultar todas las secciones
+        secciones.forEach(seccion => {
+            seccion.classList.add('oculto');
+        });
+
+    if (seccionAcerca) {
+            seccionAcerca.classList.remove('oculto');
+            // Scroll suave
+            seccionAcerca.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+}
+
+
+
     // Elementos del menú móvil
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const navbarMobile = document.getElementById('navbar-mobile');
@@ -34,20 +57,30 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Menú móvil
     if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            
-            // Cambiar ícono
-            const icon = mobileMenuToggle.querySelector('i');
-            if (nav.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    }
+    mobileMenuToggle.addEventListener('click', () => {
+        // Cambiar ícono
+        const icon = mobileMenuToggle.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+            nav.classList.add('active');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+            nav.classList.remove('active');
+        }
+    });
+}
+
+// Cerrar menú al hacer clic en un enlace
+enlaces.forEach(enlace => {
+    enlace.addEventListener('click', () => {
+        const icon = mobileMenuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+        nav.classList.remove('active');
+    });
+});
     
     // Abre el lightbox al hacer clic en una imagen
     imagenes.forEach(imagen => {
