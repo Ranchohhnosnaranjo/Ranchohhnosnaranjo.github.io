@@ -32,7 +32,7 @@
            ENCABEZADO Y NAVEGACIÓN
         ============================= */
   header.portada {
-      background: url('../img/portada.png') no-repeat center center/cover;
+      background: url('../img/portada.jpg') no-repeat center center/cover;
       background-size: cover;
       background-position: center;
       color: var(--color-blanco);
@@ -423,6 +423,26 @@
   .red-social span {
       font-weight: 600;
   }
+
+  .visitanos {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: rgba(44, 94, 26, 0.1);
+  margin-bottom: 2rem;
+}
+
+.visitanos i {
+  margin-right: 1rem;
+  transition: var(--transicion);
+  margin-top: 2rem;
+}
+
+.visitanos a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 
   /* =============================
            PIE DE PÁGINA
