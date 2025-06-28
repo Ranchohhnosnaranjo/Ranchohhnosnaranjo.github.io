@@ -626,9 +626,6 @@
   pointer-events:auto;
 }
 
-/* Ajuste: mientras se arrastra el menú, anulamos la transición       */
-nav.dragging          {transition:none;}    /* nave mueve fluido        */
-  }
 
   @media (max-width: 480px) {
       header.portada h1 {

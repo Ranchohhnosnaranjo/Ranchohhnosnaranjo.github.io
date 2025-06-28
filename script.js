@@ -54,28 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.addEventListener('click', closeMenu);
     }
     
-    // Deslizar para cerrar menú (touch)
-    if (nav) {
-        nav.addEventListener('touchstart', e => {
-            if (!nav.classList.contains('active')) return;
-            nav.classList.add('dragging');
-            startX = e.touches[0].clientX;
-        });
-        
-        nav.addEventListener('touchmove', e => {
-            if (!nav.classList.contains('active')) return;
-            currentX = e.touches[0].clientX;
-            const delta = Math.max(0, currentX - startX);
-            nav.style.transform = `translateX(${delta}px)`;
-        });
-        
-        nav.addEventListener('touchend', () => {
-            if (!nav.classList.contains('active')) return;
-            const delta = currentX - startX;
-            (delta > 70) ? closeMenu() : nav.style.transform = '';
-            nav.classList.remove('dragging');
-        });
-    }
+    
     
     // Navegación entre secciones
     document.querySelectorAll('nav a, .navbar-mobile a').forEach(enlace => {
