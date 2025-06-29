@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) cerrarLightboxFunc();
     });
-});
+
     
     // Funciones auxiliares
     function mostrarSeccion(id) {
