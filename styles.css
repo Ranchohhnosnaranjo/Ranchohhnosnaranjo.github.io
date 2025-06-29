@@ -643,22 +643,27 @@
           pointer-events: auto;
       }
 
-         /* Cambio clave: Forzar 3 columnas con tamaño flexible */
-            .grid-imagenes {
-                grid-template-columns: repeat(3, minmax(100px, 1fr))  !important;
-                gap: 8px;
-            }
+      /* Cambio clave: Forzar 3 columnas con tamaño flexible */
+      .grid-imagenes {
+          grid-template-columns: repeat(3, minmax(100px, 1fr)) !important;
+          gap: 8px;
+      }
 
-            .grid-imagenes img,
-            .video-galeria {
-                height: 120px;
-            }
+      .grid-imagenes img,
+      .video-galeria {
+          height: 120px;
+      }
 
-            .video-galeria {
-                min-height: 120px;
-            }
-        
-    
+      /* Ajustes específicos para el video */
+      .video-galeria {
+          grid-column: span 3;
+          /* Ocupa toda la fila */
+          height: auto;
+          min-height: 150px;
+          aspect-ratio: 16/9;
+          /* Proporción correcta */
+      }
+
 
 
   }
@@ -682,8 +687,9 @@
           grid-template-columns: 1fr;
           gap: 6px;
       }
+
       .grid-imagenes img,
-    .video-galeria {
-        height: 100px;
-    }
+      .video-galeria {
+          height: 100px;
+      }
   }

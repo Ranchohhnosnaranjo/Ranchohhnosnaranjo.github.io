@@ -2,10 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Elementos principales
     const lightbox = document.getElementById('lightbox');
     const imgLightbox = document.getElementById('imagen-lightbox');
+    const videoLightbox = document.getElementById('video-lightbox');
     const prevBtn = document.getElementById('prev-lightbox');
     const nextBtn = document.getElementById('next-lightbox');
     const cerrarLightbox = document.getElementById('cerrar-lightbox');
     const galleryImgs = document.querySelectorAll('.imagen-galeria');
+    const galleryVideos = document.querySelectorAll('.video-galeria');
+     const galleryItems = [...galleryImgs, ...galleryVideos];
     const secciones = document.querySelectorAll('.seccion');
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const navbarMobile = document.getElementById('navbar-mobile');
@@ -15,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Variables para funcionalidades
     let currentIndex = 0;
     let lastScrollTop = 0;
-    let startX = 0, currentX = 0;
+   
 
     // Botón Descubrir más
     const btnDescubrir = document.querySelector('.btn-descubrir');
@@ -65,29 +68,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Lightbox - Mostrar imagen y guardar índice
-    galleryImgs.forEach((img, idx) => {
-        img.addEventListener('click', () => {
+       // Lightbox - Mostrar elemento y guardar índice
+    galleryItems.forEach((item, idx) => {
+        item.addEventListener('click', () => {
             currentIndex = idx;
-            imgLightbox.src = img.src;
+            showMedia(currentIndex);
             lightbox.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         });
     });
     
-    // Lightbox - Navegación con flechas
-    function showImage(i) {
-        currentIndex = (i + galleryImgs.length) % galleryImgs.length;
-        imgLightbox.src = galleryImgs[currentIndex].src;
+    // Función para mostrar el medio actual (imagen o video)
+    function showMedia(i) {
+        currentIndex = (i + galleryItems.length) % galleryItems.length;
+        const item = galleryItems[currentIndex];
+        
+        // Ocultar ambos medios primero
+        imgLightbox.style.display = 'none';
+        videoLightbox.style.display = 'none';
+        
+        if (item.classList.contains('imagen-galeria')) {
+            // Es una imagen
+            imgLightbox.src = item.src;
+            imgLightbox.style.display = 'block';
+        } else if (item.classList.contains('video-galeria')) {
+            // Es un video
+            const source = item.querySelector('source');
+            videoLightbox.src = source.src;
+            videoLightbox.load();
+            videoLightbox.style.display = 'block';
+        }
     }
     
-    if (prevBtn) prevBtn.addEventListener('click', () => showImage(currentIndex - 1));
-    if (nextBtn) nextBtn.addEventListener('click', () => showImage(currentIndex + 1));
+    // Lightbox - Navegación con flechas
+    if (prevBtn) prevBtn.addEventListener('click', () => showMedia(currentIndex - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => showMedia(currentIndex + 1));
     
     // Cerrar Lightbox
     function cerrarLightboxFunc() {
         lightbox.style.display = 'none';
         document.body.style.overflow = 'auto';
+        // Pausar el video si está reproduciéndose
+        if (videoLightbox) videoLightbox.pause();
     }
     
     if (cerrarLightbox) cerrarLightbox.addEventListener('click', cerrarLightboxFunc);
@@ -95,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) cerrarLightboxFunc();
     });
+});
     
     // Funciones auxiliares
     function mostrarSeccion(id) {
